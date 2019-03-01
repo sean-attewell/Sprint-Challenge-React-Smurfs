@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SmurfForm.css';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -26,6 +27,10 @@ class SmurfForm extends Component {
       age: '',
       height: ''
     });
+
+    // window.history.pushState(null, null, '/')
+    window.history.go(-1)
+
   }
 
   handleInputChange = e => {
@@ -34,28 +39,37 @@ class SmurfForm extends Component {
 
   render() {
     return (
-      <div className="SmurfForm">
-        <form onSubmit={this.addSmurf}>
-          <input
-            onChange={this.handleInputChange}
-            placeholder="name"
-            value={this.state.name}
-            name="name"
-          />
-          <input
-            onChange={this.handleInputChange}
-            placeholder="age"
-            value={this.state.age}
-            name="age"
-          />
-          <input
-            onChange={this.handleInputChange}
-            placeholder="height"
-            value={this.state.height}
-            name="height"
-          />
-          <button type="submit">Add to the village</button>
-        </form>
+      <div>
+        <h2 className="SmurfForm">Enter a new smurf:</h2>
+        <div className="SmurfForm">
+          <form onSubmit={this.addSmurf}>
+            <input
+              className="inputClass"
+              onChange={this.handleInputChange}
+              placeholder="Name"
+              value={this.state.name}
+              name="name"
+              type="add"
+            />
+            <input
+              className="inputClass"
+              onChange={this.handleInputChange}
+              placeholder="Age"
+              value={this.state.age}
+              name="age"
+              type="add"
+            />
+            <input
+              className="inputClass"
+              onChange={this.handleInputChange}
+              placeholder="Height"
+              value={this.state.height}
+              name="height"
+              type="add"
+            />
+            <button className="buttonClass" type="submit">Add to the village</button>
+          </form>
+        </div>
       </div>
     );
   }

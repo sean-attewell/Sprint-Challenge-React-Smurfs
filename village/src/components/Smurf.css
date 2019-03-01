@@ -1,0 +1,13 @@
+.Smurf {
+    width: 250px;
+    background-color: lightblue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 3%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.smurf:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

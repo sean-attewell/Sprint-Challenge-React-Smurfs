@@ -6,7 +6,7 @@ const Navigation = () => {
     return (
         <div>
             <div className="nav">
-                <h1>Navigation</h1>
+                <h1>Navigation:</h1>
                 <div>
                     <NavLink
                         exact
@@ -16,7 +16,7 @@ const Navigation = () => {
                             color: 'blue'
                         }}
                     >
-                        Smurfs list!
+                        The Smurf Village!
                     </NavLink>
                 </div>
                 <div>
@@ -27,7 +27,7 @@ const Navigation = () => {
                             color: 'blue'
                         }}
                     >
-                        Add Smurf!
+                        Add a new Smurf!
                     </NavLink>
                 </div>
             </div>
