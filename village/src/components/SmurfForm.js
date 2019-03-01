@@ -13,8 +13,15 @@ class SmurfForm extends Component {
   addSmurf = event => {
     event.preventDefault();
     // add code to create the smurf using the api
+    // this.props.resetError();
 
-    this.setState({
+    // axios.post(this.props.smurfsURL, { name: this.state.name, age: this.state.age, height: this.state.height })
+    //   .then(res => this.props.setSmurfs(res.data))
+    //   .catch(this.props.setError)
+
+    this.props.postSmurfs(this.state.name, this.state.age, this.state.height)
+
+    this.setState({ // clears out state after
       name: '',
       age: '',
       height: ''
